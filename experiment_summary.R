@@ -43,7 +43,7 @@ expSummary <- function(var) {
     }
   }
   df_exp$rnaseq<-rnaseq
-  
+  write.csv(df_exp,"experiment_summary.csv", row.names = TRUE)
   
   
   ## rna sequencing (deep sequencing) datasets if exist in the given GSE
@@ -64,7 +64,5 @@ expSummary <- function(var) {
 
 # experiment_summary object
 experiment_summary<-expSummary(var)
-
-write.csv(experiment_summary,"experiment_summary.csv", row.names = TRUE)
 
 
